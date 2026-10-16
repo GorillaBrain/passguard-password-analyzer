@@ -1,0 +1,68 @@
+import type { SecurityChecklistItem } from '../types';
+
+export const SECURITY_CHECKLIST: SecurityChecklistItem[] = [
+  {
+    id: 'unique-passwords',
+    category: 'password',
+    title: 'Zero Password Reuse',
+    explanation: 'Credential stuffing attacks use automated bots to test credentials breached from one site across thousands of other services.',
+    recommendation: 'Every online account must have a distinct, dedicated password.',
+    isImportant: true,
+  },
+  {
+    id: 'length-over-complexity',
+    category: 'password',
+    title: 'Length Over Character Soup (NIST SP 800-63B)',
+    explanation: 'Traditional rules requiring 1 uppercase, 1 number, and 1 symbol lead humans to predictable patterns like "Password1!" instead of genuine entropy.',
+    recommendation: 'Prefer multi-word passphrases of 15+ characters over short complex passwords.',
+    isImportant: true,
+  },
+  {
+    id: 'enable-mfa',
+    category: 'account',
+    title: 'Enable Strong Multi-Factor Authentication (MFA)',
+    explanation: 'MFA stops over 99% of automated account takeover attacks even if a password is breached or intercepted.',
+    recommendation: 'Use time-based one-time passwords (TOTP apps like Aegis, 2FAS, Bitwarden) or FIDO2/WebAuthn hardware security keys. Avoid SMS 2FA when possible.',
+    isImportant: true,
+  },
+  {
+    id: 'password-manager',
+    category: 'tooling',
+    title: 'Adopt a Reputable Password Manager',
+    explanation: 'Human memory cannot securely retain 100+ unique, 16+ character passwords.',
+    recommendation: 'Use audited zero-knowledge password managers such as Bitwarden, 1Password, or offline tools like KeePassXC.',
+    isImportant: true,
+  },
+  {
+    id: 'avoid-leetspeak',
+    category: 'password',
+    title: 'Avoid Predictable Leetspeak Substitutions',
+    explanation: 'Modern cracking tools (Hashcat, John the Ripper) apply automated mutation rules: @ -> a, 3 -> e, 0 -> o, ! -> i in milliseconds.',
+    recommendation: 'Do not rely on letter-to-symbol substitutions to make a common dictionary word secure.',
+    isImportant: false,
+  },
+  {
+    id: 'security-questions',
+    category: 'account',
+    title: 'Treat Security Questions as Secondary Passwords',
+    explanation: 'Answers to "high school", "first pet", or "mother\'s maiden name" can be found via Open Source Intelligence (OSINT) and social media.',
+    recommendation: 'Generate random passphrases for security question answers and save them in your password manager.',
+    isImportant: false,
+  },
+  {
+    id: 'recovery-codes',
+    category: 'account',
+    title: 'Safeguard MFA Recovery / Backup Codes',
+    explanation: 'Losing access to your primary authenticator device can lock you out permanently if recovery codes are lost.',
+    recommendation: 'Save backup codes in your encrypted password manager vault or print a hardcopy stored in a physical safe.',
+    isImportant: true,
+  },
+  {
+    id: 'breach-monitoring',
+    category: 'tooling',
+    title: 'Monitor Email for Breaches (Privacy-Preserving)',
+    explanation: 'Large-scale breaches happen regularly. Being notified immediately allows you to rotate compromised credentials before exploitation.',
+    recommendation: 'Subscribe your email to breach notification services (like HaveIBeenPwned), but NEVER submit your plaintext password to any checker online.',
+    isImportant: false,
+  },
+];
