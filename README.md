@@ -12,7 +12,7 @@
 
 ## Live Deployment & Repository
 
-- **Live Web Application:** [https://passguard-password-analyzer.vercel.app](https://passguard-password-analyzer.vercel.app) *(or your deployed Vercel domain)*
+- **Live Web Application:** [https://passguard-password-analyzer-iota.vercel.app](https://passguard-password-analyzer-iota.vercel.app)
 - **GitHub Repository:** [https://github.com/GorillaBrain/passguard-password-analyzer](https://github.com/GorillaBrain/passguard-password-analyzer)
 
 ---
